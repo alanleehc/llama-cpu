@@ -16,9 +16,9 @@ pip install -e .
 magnet:?xt=urn:btih:ZXXDAUWYLRUXXBHUYEMS6Q5CE5WA3LVA&dn=LLaMA
 
 ### CPU Inference
-Place tokenizer.model and tokenizer_checklist.chk into /tokenizer folder
+Place tokenizer.model and tokenizer_checklist.chk into [/tokenizer] folder
 
-Place three files of 7B model into /model folder
+Place three files of 7B model into [/model] folder
 
 Run it:
 ```
