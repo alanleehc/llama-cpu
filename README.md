@@ -14,8 +14,7 @@ pip install -e .
 ```
 
 ### Download
-Once your request is approved, you will receive links to download the tokenizer and model files.
-Edit the `download.sh` script with the signed url provided in the email to download the model weights and tokenizer.
+magnet:?xt=urn:btih:ZXXDAUWYLRUXXBHUYEMS6Q5CE5WA3LVA&dn=LLaMA
 
 ### CPU Inference
 Place tokenizer.model and tokenizer_checklist.chk into /tokenizer folder
