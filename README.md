@@ -46,5 +46,7 @@ See the [LICENSE](LICENSE) file.
 
 ### CPU Inference
 Place tokenizer.model and tokenizer_checklist.chk into /tokenizer folder
+
 Place three files of 7B model into /model folder
+
 Run python example-cpu.py
