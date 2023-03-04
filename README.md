@@ -27,21 +27,6 @@ Run it:
 python example-cpu.py
 ```
 
-### Inference
-The provided `example.py` can be run on a single or multi-gpu node with `torchrun` and will output completions for two pre-defined prompts. Using `TARGET_FOLDER` as defined in `download.sh`:
-```
-torchrun --nproc_per_node MP example.py --ckpt_dir $TARGET_FOLDER/model_size --tokenizer_path $TARGET_FOLDER/tokenizer.model
-```
-
-Different models require different MP values:
-
-|  Model | MP |
-|--------|----|
-| 7B     | 1  |
-| 13B    | 2  |
-| 33B    | 4  |
-| 65B    | 8  |
-
 ### FAQ
 - [1. The download.sh script doesn't work on default bash in MacOS X](FAQ.md#1)
 - [2. Generations are bad!](FAQ.md#2)
