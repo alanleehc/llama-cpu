@@ -13,7 +13,7 @@ Then in this repository
 pip install -e .
 ```
 
-### Download
+### Download tokenizer and models
 magnet:?xt=urn:btih:ZXXDAUWYLRUXXBHUYEMS6Q5CE5WA3LVA&dn=LLaMA
 
 ### CPU Inference
@@ -25,12 +25,6 @@ Run it:
 ```
 python example-cpu.py
 ```
-
-### FAQ
-- [1. The download.sh script doesn't work on default bash in MacOS X](FAQ.md#1)
-- [2. Generations are bad!](FAQ.md#2)
-- [3. CUDA Out of memory errors](FAQ.md#3)
-- [4. Other languages](FAQ.md#4)
 
 ### Model Card
 See [MODEL_CARD.md](MODEL_CARD.md)
