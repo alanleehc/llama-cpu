@@ -19,7 +19,9 @@ Edit the `download.sh` script with the signed url provided in the email to downl
 
 ### CPU Inference
 Place tokenizer.model and tokenizer_checklist.chk into /tokenizer folder
+
 Place three files of 7B model into /model folder
+
 Run it:
 ```
 python example-cpu.py
