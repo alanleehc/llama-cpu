@@ -69,7 +69,7 @@ Running model with single prompt on Windows computer equipped with 12700k, fast 
 ### RAM usage optimization
 By default, torch uses Float32 precision while running on CPU, which leads, for example, to use 44 GB of RAM for 7B model. We may use Bfloat16 precision on CPU too, which decreases RAM consumption/2, down to 22 GB for 7B model, but inference processing much slower.
 
-Uncomment this line in the example-cpu.py to enable Bfloat16 and save memory.
+Uncomment this line in the example-cpu.py or example-chat.py to enable Bfloat16 and save memory.
 ```
 torch.set_default_dtype(torch.bfloat16)
 ```
