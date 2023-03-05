@@ -68,7 +68,7 @@ Running model with single prompt on Windows computer equipped with 12700k, fast 
 | model  | RAM usage, fp32 | RAM usage, bf16 | fp32 inference | bf16 inference | fp32 load model |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 7B   | 44 Gb, peak 56 Gb  | 22 Gb | 170 seconds | 850 seconds | 23 seconds |
-| 13B  | 77 Gb, peak 100 Gb | 38 Gb | 340 seconds |  | 61 seconds |
+| 13B  | 77 Gb, peak 100 Gb | 38 Gb | 340 seconds | 38 minutes | 61 seconds |
 | 30B  | 180 Gb, peak 258 Gb | 89 Gb | 48 minutes | 67 minutes | 372 seconds |
 
 ### RAM usage optimization
