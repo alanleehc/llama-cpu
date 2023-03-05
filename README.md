@@ -58,7 +58,7 @@ Running the model on Windows computer equipped with 12700k, fast nvme and 128 Gb
 | Model  | RAM usage fp32 | RAM usage bf16 | fp32 inference | bf16 inference |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 7B   | 44 Gb  | 22 Gb | 170 seconds | 850 seconds |
-| 13B  | 77 Gb, peak to 100 Gb | 380 seconds | can't handle to wait |
+| 13B  | 77 Gb, peak 100 Gb | 38 Gb | 380 seconds | can't handle to wait |
 
 ### RAM usage optimization
 By default, torch uses Float32 precision while running on CPU, that leads, for example, to using 44 GB of RAM for 7B model. We may use Bfloat16 precision on CPU too, which decreases RAM consumption/2, down to 22 GB for 7B model, but inference processing much slower.
