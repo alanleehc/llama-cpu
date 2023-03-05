@@ -53,7 +53,7 @@ python example-cpu.py
 
 ### Some measurements
 
-Running the model on Windows computer equipped with 12700k, fast nvme and 128 Gb of RAM.
+Running model with single prompt on Windows computer equipped with 12700k, fast nvme and 128 Gb of RAM.
 
 | Model  | RAM usage fp32 | RAM usage bf16 | fp32 inference | bf16 inference |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
