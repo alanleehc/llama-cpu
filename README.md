@@ -51,6 +51,12 @@ Run the example:
 python example-cpu.py
 ```
 
+### Interactive chat with LLaMA
+
+```
+python example-chat.py
+```
+
 ### Some measurements
 
 Running model with single prompt on Windows computer equipped with 12700k, fast nvme and 128 Gb of RAM.
