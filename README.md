@@ -28,12 +28,28 @@ Place tokenizer.model and tokenizer_checklist.chk into repo's [/tokenizer] folde
 
 Place consolidated.00.pth and params.json from 7B torrent folder into repo's [/model] folder.
 
-Run it:
+Run the example:
 ```
 python example-cpu.py
 ```
 
-### CPU Inference of 13B 30B 65B models
+### CPU Inference of 13B, 30B and 65B models
+A little bit tricky part is that we need to unshard the checkpoints first. Run the following command to create merged weights checkpoint:
+```
+python merge-weights.py --input_dir D:\Downloads\LLaMA --model_size 13B
+```
+This will create merged.pth file in the repo's root folder. Move this file into [/model] folder.
+
+Place corresponding params.json file (from 13B torrent folder) into repo's [/model] folder.
+
+So, you should end up with two files in [/model] folder: merged.pth and params.json.
+
+Place tokenizer.model and tokenizer_checklist.chk into repo's [/tokenizer] folder.
+
+Run the example:
+```
+python example-cpu.py
+```
 
 ### Model Card
 See [MODEL_CARD.md](MODEL_CARD.md)
