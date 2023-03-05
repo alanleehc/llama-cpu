@@ -2,8 +2,6 @@
 
 This repository is intended as a minimal, hackable and readable example to load [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference by using only CPU. Thus requires no videocard, but 64 (better 128 Gb) of RAM and modern processor is required.
 
-At the moment only 7B model inference supported.
-
 ### Conda Environment Setup Example for Windows 10+
 Download and install Anaconda Python https://www.anaconda.com and run Anaconda Prompt
 ```
@@ -25,15 +23,17 @@ pip install -e .
 ### Download tokenizer and models
 magnet:?xt=urn:btih:ZXXDAUWYLRUXXBHUYEMS6Q5CE5WA3LVA&dn=LLaMA
 
-### CPU Inference
-Place tokenizer.model and tokenizer_checklist.chk into [/tokenizer] folder
+### CPU Inference of 7B model
+Place tokenizer.model and tokenizer_checklist.chk into repo's [/tokenizer] folder.
 
-Place three files of 7B model into [/model] folder
+Place consolidated.00.pth and params.json from 7B torrent folder into repo's [/model] folder.
 
 Run it:
 ```
 python example-cpu.py
 ```
+
+### CPU Inference of 13B 30B 65B models
 
 ### Model Card
 See [MODEL_CARD.md](MODEL_CARD.md)
