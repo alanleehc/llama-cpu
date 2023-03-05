@@ -1,4 +1,4 @@
-# Inference LLaMA models using CPU only
+# Inference LLaMA models on desktops using CPU only
 
 This repository is intended as a minimal, hackable and readable example to load [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference by using only CPU. Thus requires no videocard, but 64 (better 128 Gb) of RAM and modern processor is required. Make sure you have enough swap space (128Gb should be ok :).
 
