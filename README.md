@@ -24,7 +24,7 @@ pip install -e .
 magnet:?xt=urn:btih:ZXXDAUWYLRUXXBHUYEMS6Q5CE5WA3LVA&dn=LLaMA
 
 ### CPU Inference of 7B model
-Place tokenizer.model and tokenizer_checklist.chk into repo's [/tokenizer] folder.
+Place tokenizer.model file from torrent into repo's [/tokenizer] folder.
 
 Place consolidated.00.pth and params.json from 7B torrent folder into repo's [/model] folder.
 
@@ -44,7 +44,7 @@ Place corresponding params.json file (from 13B torrent folder) into repo's [/mod
 
 So, you should end up with two files in [/model] folder: merged.pth and params.json.
 
-Place tokenizer.model and tokenizer_checklist.chk into repo's [/tokenizer] folder.
+Place tokenizer.model file from torrent into repo's [/tokenizer] folder.
 
 Run the example:
 ```
