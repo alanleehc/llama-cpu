@@ -55,7 +55,7 @@ python example-cpu.py
 
 Running model with single prompt on Windows computer equipped with 12700k, fast nvme and 128 Gb of RAM.
 
-| Model  | RAM usage fp32 | RAM usage bf16 | fp32 inference | bf16 inference |
+| model  | RAM usage, fp32 | RAM usage, bf16 | fp32 inference | bf16 inference |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 7B   | 44 Gb  | 22 Gb | 170 seconds | 850 seconds |
 | 13B  | 77 Gb, peak 100 Gb | 38 Gb | 380 seconds | can't handle to wait |
