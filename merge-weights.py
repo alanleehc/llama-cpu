@@ -1,3 +1,8 @@
+# Original copyright by Jason Phang
+# https://github.com/zphang
+# Taken here
+# https://github.com/huggingface/transformers/pull/21955/commits/8978f28e6c44b083c0b190d3931902c2904c940a#diff-110a445233a8b15a0875998eeaf75cb8607b38a5daa736291dd058766879bbdd
+
 import argparse
 import json
 import os
