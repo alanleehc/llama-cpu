@@ -22,7 +22,7 @@ def load(
     checkpoints = sorted(Path(ckpt_dir).glob("*.pth"))
     ckpt_path = checkpoints[-1]
 
-    print("Loading models...")
+    print("Loading model...")
     checkpoint = torch.load(ckpt_path, map_location="cpu")
     with open(Path(ckpt_dir) / "params.json", "r") as f:
         params = json.loads(f.read())
@@ -40,7 +40,7 @@ def load(
     model.load_state_dict(checkpoint, strict=False)
 
     generator = LLaMA(model, tokenizer)
-    print(f"Loaded models in {time.time() - start_time:.2f} seconds")
+    print(f"Loaded model in {time.time() - start_time:.2f} seconds")
     return generator
 
 
