@@ -19,8 +19,7 @@ def setup_model() -> Tuple[int, int]:
     local_rank = int(-1)
     world_size = int(1)
 
-    # seed must be the same in all processes
-    torch.manual_seed(1)
+    # torch.manual_seed(1)
     return local_rank, world_size
 
 
@@ -45,15 +44,13 @@ def load(
     model_args: ModelArgs = ModelArgs(
         max_seq_len=max_seq_len, max_batch_size=max_batch_size, **params
     )
+
     tokenizer = Tokenizer(model_path=tokenizer_path)
 
     model_args.vocab_size = tokenizer.n_words
 
-    torch.set_default_tensor_type(torch.FloatTensor)
-
     model = Transformer(model_args)
     model.to("cpu")
-    torch.set_default_tensor_type(torch.FloatTensor)
     model.load_state_dict(checkpoint, strict=False)
 
     generator = LLaMA(model, tokenizer)
@@ -78,31 +75,35 @@ def main(
     )
 
     prompts = [
-        # For these prompts, the expected answer is the natural continuation of the prompt
+        ######## For these prompts, the expected answer is the natural continuation of the prompt #######
+
         "I believe the meaning of life is",
-        "Simply put, the theory of relativity states that ",
-        "Building a website can be done in 10 simple steps:\n",
-        # Few shot prompts: https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api
-        """Tweet: "I hate it when my phone battery dies."
-Sentiment: Negative
-###
-Tweet: "My day has been 👍"
-Sentiment: Positive
-###
-Tweet: "This is the link to the article"
-Sentiment: Neutral
-###
-Tweet: "This new music video was incredibile"
-Sentiment:""",
-        """Translate English to French:
+        # "Simply put, the theory of relativity states that ",
+        # "Building a website can be done in 10 simple steps:\n",
 
-sea otter => loutre de mer
+        ######## Few shot prompts: https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api ######
 
-peppermint => menthe poivrée
+        #         """Tweet: "I hate it when my phone battery dies."
+        # Sentiment: Negative
+        # ###
+        # Tweet: "My day has been 👍"
+        # Sentiment: Positive
+        # ###
+        # Tweet: "This is the link to the article"
+        # Sentiment: Neutral
+        # ###
+        # Tweet: "This new music video was incredibile"
+        # Sentiment:""",
 
-plush girafe => girafe peluche
-
-cheese =>""",
+        #         """Translate English to French:
+        #
+        # sea otter => loutre de mer
+        #
+        # peppermint => menthe poivrée
+        #
+        # plush girafe => girafe peluche
+        #
+        # cheese =>""",
     ]
 
     start_time = time.time()
@@ -113,7 +114,7 @@ cheese =>""",
 
     for result in results:
         print(result)
-        print("\n==================================\n")
+        print("\n==================================")
 
     print(f"Inference took {time.time() - start_time:.2f} seconds")
 
