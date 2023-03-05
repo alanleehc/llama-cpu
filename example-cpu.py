@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 from llama import ModelArgs, Transformer, Tokenizer, LLaMA
 
+
 def load(
         ckpt_dir: str,
         tokenizer_path: str,
@@ -41,6 +42,7 @@ def load(
     generator = LLaMA(model, tokenizer)
     print(f"Loaded models in {time.time() - start_time:.2f} seconds")
     return generator
+
 
 def main(
         ckpt_dir: str = './model',
@@ -93,6 +95,7 @@ def main(
         print("\n==================================")
 
     print(f"Inference took {time.time() - start_time:.2f} seconds")
+
 
 if __name__ == "__main__":
     fire.Fire(main)
