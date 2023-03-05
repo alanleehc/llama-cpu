@@ -51,6 +51,14 @@ Run the example:
 python example-cpu.py
 ```
 
+### RAM usage optimization
+By default, torch uses Float32 precision while running on CPU, that leads, for example, to using 44 GB of RAM for 7B model. We may use Bfloat16 precision on CPU too, which decreases RAM consumption/2, down to 22 GB for 7B model, but inference processing much slower.
+
+Uncomment this line in the example-cpu.py to enable Bfloat16 and save memory.
+```
+# torch.set_default_dtype(torch.bfloat16)
+```
+
 ### Model Card
 See [MODEL_CARD.md](MODEL_CARD.md)
 
