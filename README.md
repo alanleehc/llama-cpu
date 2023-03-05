@@ -34,7 +34,7 @@ python example-cpu.py
 ```
 
 ### CPU Inference of 13B, 30B and 65B models
-A little bit tricky part is that we need to unshard the checkpoints first. Run the following command to create merged weights checkpoint:
+A little bit tricky part is that we need to unshard the checkpoints first. In this example, D:\Downloads\LLaMA is a root folder of downloaded torrent with models. Run the following command to create merged weights checkpoint:
 ```
 python merge-weights.py --input_dir D:\Downloads\LLaMA --model_size 13B
 ```
