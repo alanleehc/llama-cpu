@@ -1,3 +1,4 @@
 torch
 fire
 sentencepiece
+tqdm
