@@ -27,28 +27,10 @@ or
 
 magnet:xt=urn:btih:b8287ebfa04f879b048d4d4404108cf3e8014352&dn=LLaMA&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
 
-### CPU Inference of 7B model
+### CPU Inference 
 Place tokenizer.model file from torrent into repo's [/tokenizer] folder.
 
-Place consolidated.00.pth and params.json from 7B torrent folder into repo's [/model] folder.
-
-Run the example:
-```
-python example-cpu.py
-```
-
-### CPU Inference of 13B, 30B and 65B models
-A little bit tricky part is that we need to unshard the checkpoints first. In this example, D:\Downloads\LLaMA is a root folder of downloaded torrent with models. Run the following command to create merged weights checkpoint:
-```
-python merge-weights.py --input_dir D:\Downloads\LLaMA --model_size 13B
-```
-This will create merged.pth file in the repo's root folder. Move this file into [/model] folder.
-
-Place corresponding params.json file (from 13B torrent folder) into repo's [/model] folder.
-
-So, you should end up with two files in [/model] folder: merged.pth and params.json.
-
-Place tokenizer.model file from torrent into repo's [/tokenizer] folder.
+Place model files from torrent folder (for example, [/13B]) into repo's [/model] folder.
 
 Run the example:
 ```
