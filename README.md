@@ -64,7 +64,9 @@ To use Bfloat16 precision, first you need to unshard checkpoints to a single one
 python merge_weights.py --input_dir D:\Downloads\LLaMA --model_size 13B
 ```
 
-This will create merged.pth file in the root folder of this repo. Place this file and corresponding params.json of model into [/model] folder. Now you are ready to go.
+In this example, D:\Downloads\LLaMA is a root folder of downloaded torrent with weights.
+
+This will create merged.pth file in the root folder of this repo. Place this file and corresponding params.json of model into [/model] folder. File tokenizer.model should be in [/tokenizer] folder of this repo. Now you are ready to go.
 
 ```
 python example-bfloat16.py
