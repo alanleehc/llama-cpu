@@ -76,6 +76,12 @@ This will create merged.pth file in the root folder of this repo. Place this fil
 python example-bfloat16.py
 ```
 
+or 
+
+```
+python example-chat-bfloat16.py
+```
+
 ### Model Card
 See [MODEL_CARD.md](MODEL_CARD.md)
 
