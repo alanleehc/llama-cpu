@@ -2,6 +2,10 @@
 
 This repository is intended as a minimal, hackable and readable example to load [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference by using only CPU. Thus requires no videocard, but 64 (better 128 Gb) of RAM and modern processor is required. Make sure you have enough swap space (128Gb should be ok :).
 
+## CHAT WITH LLaMA on a typical home desktop PC 
+
+It is better to use another repo if you have NVIDIA card: https://github.com/randaller/llama-chat
+
 ### Conda Environment Setup Example for Windows 10+
 Download and install Anaconda Python https://www.anaconda.com and run Anaconda Prompt
 ```
